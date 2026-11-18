@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fbf9f5;
+  --foreground: #1c1917;
+  --primary: #72152b;
+  --primary-hover: #8b1834;
+  --gold: #d4af37;
+  --gold-light: #f6e6ab;
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f3eb;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #72152b;
+}
+
+/* Elegant Text Shimmer & Glows */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f6e6ab 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maroon-gradient {
+  background: linear-gradient(135deg, #72152b 0%, #4a0c1a 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #d4af37, #f6e6ab, #aa820a) 1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.luxury-card-border {
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 25px -4px rgba(212, 175, 55, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-card-border:hover {
+  border-color: #8b1834;
+  box-shadow: 0 12px 30px -5px rgba(139, 24, 52, 0.25);
+  transform: translateY(-4px);
+}
